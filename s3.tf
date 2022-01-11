@@ -5,7 +5,7 @@ provider "aws" {
 }
 
 provider "github" {
-  token = "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"
+  token = "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"
 }
 # Create s3 bucket
 
