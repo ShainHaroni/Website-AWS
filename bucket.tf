@@ -1,7 +1,7 @@
 # Create s3 bucket
 resource "aws_s3_bucket" "sre-position-pipeline" {
     bucket = "sre-position-pipeline"
-    acl = "private"
+    acl = "public-read"
 
     website {
     index_document = "Hello_world.html"
