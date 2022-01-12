@@ -1,15 +1,4 @@
-# Find the folder and gets the credentials
-provider "aws" {
-    profile = "default"
-    region  = "eu-west-2"
-}
-
-provider "github" {
-  token = "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"
-}
-
 # Create s3 bucket
-
 resource "aws_s3_bucket" "sre-position-pipeline" {
     bucket = "sre-position-pipeline"
     acl = "private"
