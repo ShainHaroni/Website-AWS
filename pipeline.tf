@@ -39,7 +39,7 @@ resource "aws_codepipeline" "github" {
       version         = "1"
 
       configuration= {
-        BucketName = "myappname.mydomain.com"
+        BucketName = "sre-position-pipeline"
         Extract = "true"
       }
     }
