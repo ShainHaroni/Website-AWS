@@ -54,6 +54,7 @@ resource "aws_iam_policy" "AWSCodePipeline_policy" {
                 "autoscaling:*",
                 "cloudwatch:*",
                 "s3:*",
+                "s3:getObject",
                 "sns:*",
                 "cloudformation:*",
                 "rds:*",
