@@ -1,4 +1,3 @@
-
 # Connect pipeline to github
 
 locals {

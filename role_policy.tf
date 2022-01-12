@@ -174,8 +174,14 @@ EOF
 
 # Attach the policy to the service role
 resource "aws_iam_role_policy_attachment" "AWSCodePipeline_role" {
+
   role       = "${aws_iam_role.AWSCodePipeline_role.name}"
-  policy_arn = "${aws_iam_policy.AWSCodePipeline_policy.arn}"
+  policy_arn = "${data.aws_iam_policy.access.arn}"
+#   policy_arn = "${aws_iam_policy.AWSCodePipeline_policy.arn}"
+
+
+#   role_arn =  "${aws_iam_policy.access.arn}" 
+
 }
 
 resource "aws_codestarconnections_connection" "connect_codestar" {
@@ -183,6 +189,6 @@ resource "aws_codestarconnections_connection" "connect_codestar" {
     provider_type = "GitHub"
 }
 
-# data "aws_iam_policy" "access" {
-#   arn = "${aws_iam_policy.AWSCodePipeline_policy.arn}"
-# }
+data "aws_iam_policy" "access" {
+  arn = "arn:aws:iam::aws:policy/AdministratorAccess"
+}
